@@ -1,4 +1,4 @@
-package com.example.product_service.model.request;
+package com.ecommerce.orderservice.model.request;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
