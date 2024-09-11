@@ -1,6 +1,6 @@
-package com.ecommerce.orderservice.model;
+package com.ecommerce.paymentservice.model;
 
-import com.ecommerce.orderservice.model.constants.PaymentMethod;
+import com.ecommerce.paymentservice.model.constants.PaymentMethod;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
@@ -9,7 +9,6 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -18,22 +17,19 @@ import java.util.List;
 @Setter
 @Entity
 @EntityListeners(AuditingEntityListener.class)
-@Table(name = "orders")
-public class Order {
+public class Payment {
     @Id
     @GeneratedValue
     private Integer id;
-    private String reference;
     private BigDecimal amount;
     @Enumerated(EnumType.STRING)
     private PaymentMethod paymentMethod;
-    @OneToMany(mappedBy = "order")
-    private List<OrderLine> orderLineList;
-    private String costumerId;
+    private Integer orderId;
     @CreatedDate
     @Column(updatable = false, nullable = false)
     private LocalDateTime createdDate;
     @LastModifiedDate
     @Column(insertable = false, nullable = false)
     private LocalDateTime lastModifiedDate;
+
 }

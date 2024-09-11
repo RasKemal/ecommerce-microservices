@@ -9,6 +9,7 @@ import lombok.*;
 @Getter
 @Setter
 @Entity
+@Table(name = "order_line")
 public class OrderLine {
     @Id
     @GeneratedValue

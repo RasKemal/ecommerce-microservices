@@ -1,6 +1,5 @@
 spring:
   application:
-    name: order-service
+    name: gateway-api-service
   config:
     import: optional:configserver:http://localhost:8888
-
