@@ -2,6 +2,6 @@ first open docker desktop, then run
 ```properties
 docker compose up -d
 ```
-in terminal to start up docker containers
-then build and run config-server and discovery-service first before running all other services
+in terminal to start up docker containers <br/> 
+then build and run config-server and discovery-service first before running all other services <br/> 
 open up postman and have fun!
